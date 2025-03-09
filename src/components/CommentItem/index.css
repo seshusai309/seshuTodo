@@ -1,0 +1,66 @@
+.amber {
+  background-color: #f59e0b;
+}
+
+.blue {
+  background-color: #0b69ff;
+}
+
+.orange {
+  background-color: #f97316;
+}
+
+.emerald {
+  background-color: #10b981;
+}
+
+.teal {
+  background-color: #14b8a6;
+}
+
+.red {
+  background-color: #b91c1c;
+}
+
+.light-blue {
+  background-color: #0ea5e9;
+}
+
+/* Write your CSS here */
+.liked-para {
+  margin-left: 10px;
+}
+
+.highlightLike {
+  color: #0ea5e9;
+}
+
+.like-section {
+  background-color: transparent;
+  border-width: 0px;
+}
+
+.btn3 {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border-width: 0;
+}
+
+.comment-card {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.profile-name-head {
+  font-size: 40px;
+}
+
+.wow {
+  text-decoration-line: line-through;
+}
