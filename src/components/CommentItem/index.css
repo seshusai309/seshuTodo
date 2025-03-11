@@ -1,44 +1,32 @@
 .amber {
-  background-color: #f59e0b;
+  color: #f59d06;
 }
 
 .blue {
-  background-color: #0b69ff;
+  color: #0062ff;
 }
 
 .orange {
-  background-color: #f97316;
+  color: #f06400;
 }
 
 .emerald {
-  background-color: #10b981;
+  color: #01feaa;
 }
 
 .teal {
-  background-color: #14b8a6;
+  color: #00a995;
 }
 
 .red {
-  background-color: #b91c1c;
+  color: #f53a5f;
 }
 
 .light-blue {
-  background-color: #0ea5e9;
+  background-color: #008dcf;
 }
 
 /* Write your CSS here */
-.liked-para {
-  margin-left: 10px;
-}
-
-.highlightLike {
-  color: #0ea5e9;
-}
-
-.like-section {
-  background-color: transparent;
-  border-width: 0px;
-}
 
 .btn3 {
   background-color: transparent;
@@ -49,18 +37,59 @@
 
 .comment-card {
   display: flex;
-  gap: 40px;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow:
-    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-
-.profile-name-head {
-  font-size: 40px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background-color: bisque;
+  border-color: rgb(27, 27, 27);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 
 .wow {
   text-decoration-line: line-through;
+}
+
+.delHOver:hover {
+  color: #ff4848;
+}
+
+.ics {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.header {
+  font-size: 20px;
+  font-weight: 1000;
+}
+
+.bts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-width: 0px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@media (max-width: 576px) {
+  .bts {
+    height: 30px;
+    width: 30px;
+  }
+  .ics {
+    font-size: 20px;
+  }
+  .header {
+    font-size: 10px;
+  }
 }

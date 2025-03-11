@@ -1,8 +1,10 @@
+import {FaRegCircleCheck} from 'react-icons/fa6'
+import {MdOutlineDeleteForever} from 'react-icons/md'
 import './index.css'
 
 const Comment = props => {
   const {commentedLists, fun1, fun2} = props
-  const {id, name, strike} = commentedLists
+  const {id, name, strike, clr} = commentedLists
   const clicked = () => {
     fun1(id)
   }
@@ -10,27 +12,29 @@ const Comment = props => {
   const doned = () => {
     fun2(id)
   }
-
+  let vals = clr
   let styled
-
-  if (id === strike) {
+  if (strike) {
     styled = 'wow'
   } else {
     styled = ''
+    vals = ''
   }
   return (
-    <li className="comment-card">
-      <button onClick={doned}>Done</button>
-      <h1 className={`profile-name-head ${styled}`}>{name}</h1>
-      <div className="bottom-buttons">
-        <button data-testid="delete" type="button" onClick={clicked}>
-          <img
-            alt="delete"
-            src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
-          />
-        </button>
-      </div>
-    </li>
+    <div className="comment-card">
+      <button className="bts" type="button" onClick={doned}>
+        <FaRegCircleCheck className={`ics ${vals}`} />
+      </button>
+      <p className={`header ${styled}`}>{name}</p>
+      <button
+        className="bts"
+        data-testid="delete"
+        type="button"
+        onClick={clicked}
+      >
+        <MdOutlineDeleteForever className="ics delHOver" />
+      </button>
+    </div>
   )
 }
 

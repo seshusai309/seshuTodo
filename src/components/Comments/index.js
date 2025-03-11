@@ -1,6 +1,5 @@
 import {Component} from 'react'
 import {v4 as uuidv4} from 'uuid'
-import {formatDistanceToNow} from 'date-fns'
 import Comment from '../CommentItem'
 import './index.css'
 
@@ -19,7 +18,6 @@ class Comments extends Component {
 
   submitedForm = event => {
     event.preventDefault()
-
     this.setState(each => {
       if (each.name === '') {
         return true
@@ -35,7 +33,6 @@ class Comments extends Component {
             name: each.name,
 
             clr: initialContainerBackgroundClassNames[each.count],
-            time: formatDistanceToNow(new Date()),
             strike: false,
           },
         ],
@@ -43,9 +40,24 @@ class Comments extends Component {
     })
   }
 
+  liked = id => {
+    this.setState(each => ({
+      commentsList: each.commentsList.map(eached => {
+        if (eached.id === id) {
+          return {
+            id: eached.id,
+            name: eached.name,
+            clr: eached.clr,
+            strike: !eached.strike,
+          }
+        }
+        return eached
+      }),
+    }))
+  }
+
   nameChanging = event => {
     this.setState({name: event.target.value})
-    console.log('hi')
   }
 
   delete = id => {
@@ -56,10 +68,10 @@ class Comments extends Component {
 
   render() {
     const {name, commentsList} = this.state
-
     return (
       <div className="Main-Container">
         <h1 className="Comment-Mainhead">Task tracker</h1>
+
         <div className="container">
           <div className="sub-container">
             <p className="comments-para">
@@ -79,6 +91,7 @@ class Comments extends Component {
             </form>
           </div>
         </div>
+
         <hr />
 
         <div className="Comments-count">
@@ -88,7 +101,7 @@ class Comments extends Component {
           </div>
         </div>
 
-        <ul>
+        <div>
           {commentsList.map(each => (
             <Comment
               key={each.id}
@@ -97,7 +110,7 @@ class Comments extends Component {
               commentedLists={each}
             />
           ))}
-        </ul>
+        </div>
       </div>
     )
   }

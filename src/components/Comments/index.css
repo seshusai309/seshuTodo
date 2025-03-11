@@ -13,10 +13,6 @@ ul {
   margin: 5% 10% 5% 10%;
 }
 
-.para-comments {
-  font-size: 8px;
-}
-
 .commented {
   display: flex;
   justify-content: center;
@@ -44,7 +40,7 @@ ul {
 }
 
 .comments-para {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
 }
 
@@ -65,7 +61,6 @@ ul {
   width: 400px;
   margin-bottom: 20px;
   padding: 3px 7px;
-  line-height: normal;
   border: 1px solid #a6a6a6;
   border-top-color: #949494;
   border-radius: 3px;
@@ -76,7 +71,7 @@ ul {
   color: #111;
   font-size: 13px;
 }
-:focus {
+.input1:focus {
   border-color: #e77600;
   box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
 }
@@ -117,7 +112,7 @@ ul {
 }
 
 .profile-name-head {
-  font-size: 20px;
+  font-size: 100px;
 }
 
 .bottom-buttons {
@@ -216,5 +211,11 @@ ul {
 @media (min-width: 768px) {
   .button-56 {
     padding: 0 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .input1 {
+    width: 270px;
   }
 }
